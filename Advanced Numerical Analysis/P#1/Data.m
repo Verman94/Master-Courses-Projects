@@ -1,0 +1,10 @@
+clear 
+clc
+x=linspace(0.1,24,500);
+u1=(3.74e+08)./((x.^5).*(exp(14400./(x.*400))-1));
+u2=(3.74e+08)./((x.^5).*(exp(14400./(x.*1000))-1));
+u3=(3.74e+08)./((x.^5).*(exp(14400./(x.*6000))-1));
+xlswrite('Data.xlsx',x');
+xlswrite('Data.xlsx',u1',1,'B1');
+xlswrite('Data.xlsx',u2',1,'C1');
+xlswrite('Data.xlsx',u3',1,'D1');
